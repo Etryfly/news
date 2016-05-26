@@ -58,11 +58,12 @@ $max = mysql_fetch_array($query)[0];
 $query = mysql_query('SELECT * FROM blog');
 
 //echo '<a href="add.php">ADD</a><br><br>';
-for ($i = 0; $i < $max; $i++) {
+for ($i = 0; $i < $max; $i++)
+{
     $row = mysql_fetch_array($query);
 
     echo '<div class="news_item">';
-    echo '<div class="title"><a href="?news_id='.$row['id'].'">'. $row['title'].'</a></div>';
+    echo '<div class="title"><a href="http://bat.shsa.ru/blog/news.php?news_id='.$row['id'].'">'. $row['title'].'</a></div>';
 
     echo "<hr>";
 
@@ -70,7 +71,10 @@ for ($i = 0; $i < $max; $i++) {
 
 }
 
-
+//if(isset($_GET['news_id']))
+//{
+//    header()
+//}
 
 
 
